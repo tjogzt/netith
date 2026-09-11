@@ -1,0 +1,19 @@
+{
+  "design": "regulon-membership shuffle (gene labels permuted, regulon sizes kept), 500 draws, seed 42",
+  "real_median_rho": -0.23804381468702007,
+  "null": {
+    "n": 500,
+    "mean": -0.1986597638325478,
+    "sd": 0.03183017628978376,
+    "range": [
+      -0.28842534255505026,
+      -0.10328233898124145
+    ]
+  },
+  "emp_p": 0.11377245508982035,
+  "stream_sensitivity": {
+    "50-draw_run1_emp_p": 0.333,
+    "50-draw_run2_emp_p": 0.0196,
+    "note": "both seed-consistent realizations of the same design"
+  }
+}

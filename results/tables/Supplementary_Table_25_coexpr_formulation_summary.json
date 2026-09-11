@@ -1,0 +1,11 @@
+{
+ "n_patients": 113,
+ "rho_coexpr_vs_netith_e": 0.343078381795196,
+ "p_coexpr_vs_netith_e": 0.00019923337275349964,
+ "rho_coexpr_vs_mean_vn": 0.07884756138132944,
+ "p_coexpr_vs_mean_vn": 0.40646228317786437,
+ "n_tfs": 53,
+ "n_targets": 213,
+ "n_edges": 695,
+ "cells_verified": true
+}

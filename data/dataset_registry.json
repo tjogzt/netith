@@ -1,0 +1,14 @@
+{
+  "scan_time": "2026-07-27T03:22:25.217545",
+  "data_roots": [
+    "/Volumes/tjogzt4T/data/",
+    "/Volumes/thinkplus/network/subject10/data/raw",
+    "/Volumes/thinkplus/network/subject10/data/external"
+  ],
+  "by_category": {
+    "scRNA-seq": [],
+    "TCGA": [],
+    "reference": []
+  },
+  "all_found": []
+}

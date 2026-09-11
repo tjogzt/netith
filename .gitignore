@@ -1,0 +1,25 @@
+# macOS / editor noise
+.DS_Store
+._*
+__pycache__/
+*.pyc
+
+# R
+.RData
+.Rhistory
+
+# LaTeX
+*.aux
+*.log
+*.out
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pipeline runtime artifacts
+results/pipeline_run_log.csv
+/tmp/
+
+# External licensed/re-downloadable data and intermediate figure panels
+data/external/
+results/figures/panels/

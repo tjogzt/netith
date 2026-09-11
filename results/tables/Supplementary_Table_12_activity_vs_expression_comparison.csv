@@ -1,0 +1,3 @@
+metric,description,tfs,targets,drug_prediction_rho_median
+Expression-NetITH,TF expression × target co-expression Laplacian,57,385 (CollecTRI),0.13018244085070874
+Activity-NetITH,TF regulon activity × target co-expression Laplacian,variable,385 (CollecTRI),

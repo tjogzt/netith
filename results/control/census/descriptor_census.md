@@ -1,0 +1,13 @@
+# Four-test protocol · descriptor census (round-4 extension #1)
+
+All drug associations: 286 GDSC compounds, per-sample Spearman rho (cell lines n=1,013; per-drug n varies). Test 3 purity: Aran 2015 (TCGAbiolinks, n=9,364). Test 4 transfer: GSE25066 neoadjuvant pCR (logistic OR per SD; n=306).
+
+| Descriptor | median rho (IC50) | rho>0 | FDR<0.05 | median rho (AUC) | strata lo/mid/hi | Test 1 (topology vs null) | Test 2 (vs MAD) | Test 3 (purity) | Test 4 (GSE25066 OR) |
+|---|---|---|---|---|---|---|---|---|---|
+| NetITH (CollecTRI Laplacian entropy) | 0.232 | 286/286 | 276 | 0.022 | 0.242/0.223/0.227 | real 0.232 vs amplitude-matched null 0.130 (z=3.45, p=5.7e-4; manuscript cached) | median rho 0.232 (baseline MAD 0.381) | ESTIMATE=-0.09, ABSOLUTE=-0.08, LUMP=-0.05, IHC=0.07, CPE=-0.07 | OR=0.86 [0.64,1.14], p=0.29 |
+| Signaling entropy (Teschendorff; 800-gene correlation scaffold) | 0.180 | 284/286 | 272 | 0.018 | 0.183/0.171/0.182 | real 0.180 vs rewired null mean -0.017 (range [-0.293, 0.275], n=50); emp p=0.137 | median rho 0.180 (baseline MAD 0.381) | ESTIMATE=0.03, ABSOLUTE=-0.26, LUMP=0.05, IHC=0.04, CPE=0.01 | OR=1.19 [0.92,1.54], p=0.19 |
+| Differential network entropy (West 2012; same scaffold) | -0.224 | 6/286 | 262 | -0.025 | -0.236/-0.222/-0.219 | real -0.224 vs rewired null mean -0.004 (range [-0.300, 0.254], n=50); emp p=0.059 | median rho -0.224 (baseline MAD 0.381) | ESTIMATE=-0.46, ABSOLUTE=-0.07, LUMP=-0.33, IHC=-0.26, CPE=-0.32 | OR=0.89 [0.67,1.17], p=0.41 |
+| TF-activity aggregate (decoupleR-style; CollecTRI) | -0.238 | 13/286 | 260 | -0.016 | -0.254/-0.227/-0.237 | real -0.238 vs regulon-shuffle null mean -0.200 (range [-0.219, -0.176], n=50); emp p=0.020; stabilized 500-draw emp p=0.114 (50-draw pass is a realization artifact) | median rho -0.238 (baseline MAD 0.381) | n/a | n/a |
+| Expression Shannon entropy | 0.357 | 274/286 | 274 | 0.015 | 0.377/0.346/0.333 | N/A (no graph topology) | median rho 0.357 (baseline MAD 0.381) | ESTIMATE=0.03, ABSOLUTE=-0.19, LUMP=0.10, IHC=-0.15, CPE=-0.01 | OR=1.67 [1.15,2.42], p=0.01 |
+| Expression MAD | 0.381 | 274/286 | 277 | 0.031 | 0.403/0.374/0.365 | N/A (no graph topology) | self (baseline row; 0.381) | ESTIMATE=0.50, ABSOLUTE=0.43, LUMP=0.33, IHC=0.36, CPE=0.46 | OR=1.07 [0.80,1.42], p=0.64 |
+| CytoTRACE bulk proxy | 0.384 | 275/286 | 276 | 0.008 | 0.411/0.375/0.360 | N/A (no graph topology) | median rho 0.384 (baseline MAD 0.381) | ESTIMATE=-0.60, ABSOLUTE=-0.53, LUMP=-0.60, IHC=-0.22, CPE=-0.62 | OR=1.07 [0.80,1.43], p=0.63 |

@@ -1,0 +1,25 @@
+{
+ "cohort": "GSE25066",
+ "n": 306,
+ "n_pcr": 57,
+ "netith_median": 4.198656846954371,
+ "or_per_sd": 1.2712696236546965,
+ "ci": [
+  0.9310780877967061,
+  1.7357582325361556
+ ],
+ "p": 0.13090723376078117,
+ "mw_p": 0.108181181274866,
+ "pcr_rate_high_vs_low_tertile": 0.08823529411764705,
+ "n_edges": 62,
+ "n_genes": 300,
+ "drfs_hr_per_sd": 1.170959,
+ "drfs_ci": [
+  0.906,
+  1.513
+ ],
+ "drfs_p": 0.2272,
+ "drfs_n": 306,
+ "drfs_events": 64,
+ "drfs_note": "univariable Cox on drfs_even_time_years ~ z-scored NetITH (per SD); recomputed 2026-08-23 from gse25066_netith_pcr.csv"
+}

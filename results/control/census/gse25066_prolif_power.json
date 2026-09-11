@@ -1,0 +1,27 @@
+{
+  "cohort": "GSE25066",
+  "proliferation_signature": "mean of MKI67/PCNA/MCM2/TOP2A expression (probe-collapsed, series matrix)",
+  "shannon_vs_proliferation": {
+    "rho": 0.124,
+    "p": 0.00522,
+    "n": 508
+  },
+  "netith239_vs_proliferation": {
+    "rho": 0.048,
+    "p": 0.398,
+    "n": 306
+  },
+  "shannon_vs_netith239": {
+    "rho": 0.026,
+    "p": 0.654,
+    "n": 306
+  },
+  "power": {
+    "n": 306,
+    "pcr_rate": 0.186,
+    "alpha": 0.05,
+    "power_or_1.5": 0.774,
+    "power_or_1.8": 0.974,
+    "power_or_2.0": 0.996
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "real": {
+    "median_rho": 0.23171402650064382,
+    "n_pos": 286,
+    "n_drugs": 286
+  },
+  "null": {
+    "design": "census rewire_weighted (undirected double-edge swap, degree-preserving, signed weights shuffled, 50 draws, seed 42)",
+    "n": 50,
+    "mean": 0.14089295921716796,
+    "sd": 0.03214721955725796,
+    "range": [
+      0.05545402424234218,
+      0.1931668644667809
+    ]
+  },
+  "emp_p": 0.0196078431372549,
+  "manuscript_reference_null": {
+    "design": "directed configuration-model rewire (manuscript Test-1, cached)",
+    "median_rho": 0.13,
+    "range": [
+      0.049,
+      0.199
+    ],
+    "emp_p": 0.0196078431372549
+  }
+}
