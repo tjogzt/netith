@@ -1,14 +1,14 @@
 # ============================================================================
-# figED5_phospho_netith.R — Extended Data Figure 5: Phospho-NetITH. Panels A-C: (A) phospho vs expression NetITH scatter, (B) top-12 drugs by |rho| improvement, (C) pathway-level phosphosite (kinase-count) decomposition.
+# figS11_phospho_netith.R — Supplementary Figure 11
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-06
 # Inputs  : results/depmap/ext_d6_phospho_netith.csv,
 #           results/depmap/ext_d6_drug_comparison.csv,
 #           results/depmap/ext_d6_kinase_pathway_netith.csv
-# Outputs : results/figures/r/EDFig5_phospho_netith.{pdf,png}
+# Outputs : results/figures/r/FigS11_phospho_netith.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED5_phospho_netith.R
+# Usage   : Rscript code/R/figures/figS11_phospho_netith.R
 # ============================================================================
 
 .d <- getwd()
@@ -18,7 +18,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig5_phospho_netith"
+NAME <- "FigS11_phospho_netith"
 DEP <- file.path(RESULTS_DIR, "depmap")
 COL_PHOSPHO <- NPG_COLORS[8]        # "#FF7F00" - phospho orange (manuscript colour)
 

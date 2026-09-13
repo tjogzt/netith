@@ -98,7 +98,7 @@ if (nrow(shared) > 0) {
 }
 
 # --- factor 3: GDSC subsample null at n=487 (PRISM-matched size) ---
-N_SUB <- 487L; N_DRAW <- 100L
+N_SUB <- 488L; N_DRAW <- 100L
 all_cl <- intersect(names(nt), ic50_mat$CELL_LINE_NAME)
 sub_med <- numeric(N_DRAW)
 set.seed(SEED)  # seed ONCE: the RNG must advance between draws
@@ -131,8 +131,8 @@ out <- list(
   paired_wilcoxon_auc_p   = wt_auc$p.value,
   residual_median_prism_minus_gdsc_auc = resid_auc,
   residual_median_prism_minus_gdsc_ic50 = resid_ic50,
-  subsample487_null_mean = mean(sub_med), subsample487_null_sd = sd(sub_med),
-  subsample487_null_range = range(sub_med), n_sub = N_SUB, n_draw = N_DRAW,
+  subsample488_null_mean = mean(sub_med), subsample488_null_sd = sd(sub_med),
+  subsample488_null_range = range(sub_med), n_sub = N_SUB, n_draw = N_DRAW,
   note = "PRISM raw matrix unavailable (figshare 403 from this network); archived per-drug PRISM results are the authoritative PRISM numbers; cell-line factor approximated by GDSC subsample null at the PRISM-matched size."
 )
 write_json(out, file.path(RESULTS_DIR, "control", "prism_root_cause.json"),

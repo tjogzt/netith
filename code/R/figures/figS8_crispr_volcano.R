@@ -1,12 +1,12 @@
 # ============================================================================
-# figED2_crispr_volcano.R — Extended Data Figure 2: genome-wide CRISPR-CERES vs NetITH volcano (single panel). Significance by Bonferroni threshold 0.05/n.
+# figS8_crispr_volcano.R — Supplementary Figure 8
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-06
 # Inputs  : results/depmap/ext_d1_crispr_netith_correlations.csv
-# Outputs : results/figures/r/EDFig2_crispr_volcano.{pdf,png}
+# Outputs : results/figures/r/FigS8_crispr_volcano.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED2_crispr_volcano.R
+# Usage   : Rscript code/R/figures/figS8_crispr_volcano.R
 # ============================================================================
 
 .d <- getwd()
@@ -16,7 +16,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig2_crispr_volcano"
+NAME <- "FigS8_crispr_volcano"
 DEP <- file.path(RESULTS_DIR, "depmap")
 
 cat("=== EDFig2: CRISPR-NetITH volcano ===\n")

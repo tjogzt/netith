@@ -1,5 +1,5 @@
 # ============================================================================
-# figED7_emt_stemness.R — Extended Data Figure 7: NetITH biological anchoring (EMT, stemness mRNAsi/EREG, DTP). Panels A-D: (A) GDSC 76-gene EMT score vs NetITH, (B) TCGA mRNAsi vs bulk NetITH, (C) DTP gene-enrichment volcano, (D) summary bars.
+# figS13_emt_stemness.R — Supplementary Figure 13
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-07
@@ -8,9 +8,9 @@
 #           results/depmap/emt_stemness_results.csv (cached headline stats),
 #           $NETITH_DATA_ROOT/xena/tcgapancan/StemnessScores_RNAexp_20170127.2.tsv.gz
 #           (data disk via NETITH_DATA_DISK env; see Usage)
-# Outputs : results/figures/r/EDFig7_emt_stemness_dtp.{pdf,png}
+# Outputs : results/figures/r/FigS13_emt_stemness_dtp.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : NETITH_DATA_ROOT=$NETITH_DATA_DISK/data Rscript code/R/figures/figED7_emt_stemness.R
+# Usage   : NETITH_DATA_ROOT=$NETITH_DATA_DISK/data Rscript code/R/figures/figS13_emt_stemness.R
 # Note    : Former placeholder panel B (TCGA Hallmark EMT ssGSEA) removed: ssGSEA scores unavailable; GDSC EMT panel A suffices.
 # ============================================================================
 
@@ -21,7 +21,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig7_emt_stemness_dtp"
+NAME <- "FigS13_emt_stemness_dtp"
 H_MM <- 4.4291 / 7.0866 * 180   # 112.5 mm (Python figsize 7.0866 x 4.4291 in)
 
 DATA_ROOT <- Sys.getenv("NETITH_DATA_ROOT", unset = file.path(PROJECT_ROOT, "data"))

@@ -33,10 +33,10 @@ flows <- list(
   "GDSC cell lines" = list(
     list("RNA expression", "1,018 profiled samples"),
     list("Mapped cell lines", "1,013 with expression +\nNetITH"),
-    list("Drug screening", "286 drugs; 969 cell lines\nwith IC50; median 900+ per drug"),
+    list("Drug screening", "286 drugs; 969 cell lines\nwith IC50; \u2265900 per drug"),
     list("Analysis", "1,013 lines, 286 drugs\n(per-drug n reported)")),
   "TCGA tumours" = list(
-    list("RNA expression", "10,535 tumour samples (TOIL)"),
+    list("RNA expression", "10,535 tumour samples\n(TOIL)"),
     list("NetITH computed", "11,069 samples\n(9,710 tumours + 744 normal)"),
     list("Survival annotation", "9,633 tumour samples\nwith OS"),
     list("Meta-analysis", "26 cancer types,\n3,073 events")),

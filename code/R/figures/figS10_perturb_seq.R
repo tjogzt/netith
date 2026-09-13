@@ -1,5 +1,5 @@
 # ============================================================================
-# figED4_perturb_seq.R — Extended Data Figure 4: Perturb-seq landscape. Panels A-D: (A) virtual-perturbation volcano (Cohen's d vs FDR), (B) top TF mediator (text), (C) perturbation-drug signature coherence, (D) combinatorial TF interaction screen.
+# figS10_perturb_seq.R — Supplementary Figure 10
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-06
@@ -7,9 +7,9 @@
 #           results/depmap/ext_d5_tf_perturb_mediation.csv,
 #           results/depmap/ext_d5_perturb_drug_signature.csv,
 #           results/depmap/ext_d5_combinatorial_screen.csv
-# Outputs : results/figures/r/EDFig4_perturb_seq.{pdf,png}
+# Outputs : results/figures/r/FigS10_perturb_seq.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED4_perturb_seq.R
+# Usage   : Rscript code/R/figures/figS10_perturb_seq.R
 # ============================================================================
 
 .d <- getwd()
@@ -19,7 +19,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig4_perturb_seq"
+NAME <- "FigS10_perturb_seq"
 DEP <- file.path(RESULTS_DIR, "depmap")
 PERT <- file.path(DEP, "perturbation")
 

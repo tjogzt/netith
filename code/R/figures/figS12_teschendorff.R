@@ -1,5 +1,5 @@
 # ============================================================================
-# figED6_teschendorff.R — Extended Data Figure 6: NetITH vs Teschendorff signaling-entropy benchmark (STRING PPI). Panels A-D: (A) SR-NetITH scatter, (B) distribution comparison, (C) directional consistency (286 drugs), (D) benchmark summary text.
+# figS12_teschendorff.R — Supplementary Figure 12
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-06
@@ -7,9 +7,9 @@
 #           results/gdsc/gdsc_netith_cell_lines.csv,
 #           results/gdsc/gdsc_drug_netith_correlations.csv,
 #           results/gdsc/teschendorff_benchmark_results.csv
-# Outputs : results/figures/r/EDFig6_teschendorff_benchmark.{pdf,png}
+# Outputs : results/figures/r/FigS12_teschendorff_benchmark.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED6_teschendorff.R
+# Usage   : Rscript code/R/figures/figS12_teschendorff.R
 # ============================================================================
 
 .d <- getwd()
@@ -19,7 +19,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig6_teschendorff_benchmark"
+NAME <- "FigS12_teschendorff_benchmark"
 H_MM <- 4.0495 / 7.0866 * 180   # 102.9 mm (Python figsize 7.0866 x 4.0495 in)
 
 GDSC_D <- file.path(RESULTS_DIR, "gdsc")

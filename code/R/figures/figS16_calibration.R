@@ -1,14 +1,14 @@
 # ============================================================================
-# figED10_calibration.R — Extended Data Figure 10: calibration / DCA / nomogram. Panels A-C: (A) cross-platform calibration (Wasserstein), (B) decision curve analysis, (C) nomogram discrimination (C-index).
+# figS16_calibration.R — Supplementary Figure 16
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-07
 # Inputs  : results/depmap/crossplatform_calibration_stats.csv,
 #           results/tcga/dca_summary.csv,
 #           results/tcga/nomogram_cox_results.csv
-# Outputs : results/figures/r/EDFig10_calibration_dca_nomogram.{pdf,png}
+# Outputs : results/figures/r/FigS16_calibration_dca_nomogram.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED10_calibration.R
+# Usage   : Rscript code/R/figures/figS16_calibration.R
 # ============================================================================
 
 .d <- getwd()
@@ -18,7 +18,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig10_calibration_dca_nomogram"
+NAME <- "FigS16_calibration_dca_nomogram"
 H_MM <- 2.4297 / 7.0866 * 180   # 61.7 mm (Python figsize 7.0866 x 2.4297 in)
 
 cal <- fread(file.path(RESULTS_DIR, "depmap", "crossplatform_calibration_stats.csv"))

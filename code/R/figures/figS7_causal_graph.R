@@ -1,12 +1,12 @@
 # ============================================================================
-# figED1_causal_graph.R — Extended Data Figure 1: DirectLiNGAM causal graph (single panel). Directed edges weighted by |Pearson r|, AP-1-family (JUN/FOS/ATF) edges highlighted.
+# figS7_causal_graph.R — Supplementary Figure 7
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-07
 # Inputs  : results/depmap/ext_d1_causal_discovery.csv
-# Outputs : results/figures/r/EDFig1_causal_graph.{pdf,png}
+# Outputs : results/figures/r/FigS7_causal_graph.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED1_causal_graph.R
+# Usage   : Rscript code/R/figures/figS7_causal_graph.R
 # Note    : Node positions come from a Fruchterman-Reingold layout (seed 49); all numbers (edge count, AP-1 count, weights) are read from cache.
 # ============================================================================
 
@@ -17,7 +17,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork); library(igraph) })
 
-NAME <- "EDFig1_causal_graph"
+NAME <- "FigS7_causal_graph"
 DEP <- file.path(RESULTS_DIR, "depmap")
 
 cat("=== EDFig1: DirectLiNGAM causal graph ===\n")

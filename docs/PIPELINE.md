@@ -89,7 +89,7 @@
 | Output | Manuscript item |
 |---|---|
 | `results/figures/r/Fig1–Fig4_*.pdf` | Main Figures 1–4 |
-| `results/figures/r/EDFig1–EDFig10_*.pdf` | Extended Data Figures 1–10 |
+| `results/figures/r/FigS7–FigS16_*.pdf` | Supplementary Figures 7–16 |
 | `results/figures/r/FigS1–FigS6_*.pdf` | Supplementary Figures 1–6 |
 | `results/submission/tables/Supplementary_Table_01…26` | Supplementary Tables 1–26 (shipped under `results/tables/`) |
 | `results/control/census/*` | Descriptor census (SI-N20, Fig. S6) |

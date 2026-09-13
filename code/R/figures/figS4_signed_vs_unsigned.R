@@ -78,7 +78,7 @@ pB <- ggplot(gain, aes(construction, median_rho, fill = construction)) +
   scale_fill_manual(values = c("sign-null\n(signs randomised)" = COL_NS, "unsigned (|w|)" = COL_GDSC,
                                "signed" = COL_NETITH), guide = "none") +
   coord_cartesian(ylim = c(0, 0.27)) +
-  annotate("text", x = 3, y = 0.255, hjust = 0.5, size = FONT_BASE/.pt, colour = COL_SIG,
+  annotate("text", x = 2.0, y = 0.255, hjust = 0.5, size = FONT_BASE/.pt, colour = COL_SIG,
            label = "signed - unsigned = 0.058\n(~58% of association strength\nattributable to edge signs)") +
   labs(title = "B  Information-gain decomposition\n(286 GDSC drugs)",
        x = NULL, y = "median Spearman \u03c1 (NetITH vs ln(IC50))") +

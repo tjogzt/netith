@@ -44,7 +44,7 @@ core entropy values and ρ = 0.999993 on drug associations (see
 | `figures/fig02_drug_response.R` | Fig. 2: survival forest, GDSC drugs, GSE25066, IMvigor210 (4 panels) | ✓ |
 | `figures/fig03_robustness.R` | Fig. 3: robustness, construct validity, cross-platform drivers | ✓ |
 | `figures/fig04_ner_hypothesis.R` | Fig. 4: NER workflow as hypothesis generation | ✓ |
-| `figures/figED1–figED10_*.R` | Extended Data Figures 1–10 | ✓ |
+| `figures/figS7–figS16_*.R` | Supplementary Figures 7–16 | ✓ |
 | `figures/figS1–figS6_*.R` | Supplementary Figures 1–6 (incl. descriptor census, Fig. S6) | ✓ |
 
 ## Figure outputs

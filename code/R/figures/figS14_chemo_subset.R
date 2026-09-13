@@ -1,14 +1,14 @@
 # ============================================================================
-# figED8_chemo_subset.R — Extended Data Figure 8: TCGA chemotherapy-stratified NetITH survival (within-system paradox). Panels A-F: (A) HR forest, (B) 3-year survival by median split, (C) per-cancer HR scatter, (D) distribution by treatment, (E) treated-HR bars, (F) summary text.
+# figS14_chemo_subset.R — Supplementary Figure 14
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-07
 # Inputs  : results/chemo_subset/chemo_results.json,
 #           results/chemo_subset/chemo_per_cancer_results.csv,
 #           results/chemo_subset/tcga_treatment_classified.csv
-# Outputs : results/figures/r/EDFig8_treatment_stratified.{pdf,png}
+# Outputs : results/figures/r/FigS14_treatment_stratified.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED8_chemo_subset.R
+# Usage   : Rscript code/R/figures/figS14_chemo_subset.R
 # ============================================================================
 
 .d <- getwd()
@@ -18,7 +18,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork); library(jsonlite) })
 
-NAME <- "EDFig8_treatment_stratified"
+NAME <- "FigS14_treatment_stratified"
 H_MM <- 5.3150 / 7.0866 * 180   # 135.0 mm (Python figsize 7.0866 x 5.3150 in)
 
 CHEMO_D <- file.path(RESULTS_DIR, "chemo_subset")

@@ -1,13 +1,13 @@
 # ============================================================================
-# figED9_neoadjuvant.R — Extended Data Figure 9: GSE25066 neoadjuvant pCR validation. Panels A-C: (A) OR-per-SD forest (Pooled/MDACC/ISPY), (B) pCR rate by NetITH tertile, (C) NetITH distribution by response (Mann-Whitney).
+# figS15_neoadjuvant.R — Supplementary Figure 15
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-06
 # Inputs  : results/neoadjuvant/gse25066_fixed_network_netith.csv,
 #           results/neoadjuvant/gse25066_fixed_network_summary.json (cached stats)
-# Outputs : results/figures/r/EDFig9_neoadjuvant_pcr.{pdf,png}
+# Outputs : results/figures/r/FigS15_neoadjuvant_pcr.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED9_neoadjuvant.R
+# Usage   : Rscript code/R/figures/figS15_neoadjuvant.R
 # ============================================================================
 
 .d <- getwd()
@@ -17,7 +17,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork); library(jsonlite) })
 
-NAME <- "EDFig9_neoadjuvant_pcr"
+NAME <- "FigS15_neoadjuvant_pcr"
 H_MM <- 2.8906 / 7.0866 * 180   # 73.4 mm (Python figsize 7.0866 x 2.8906 in)
 
 NEO_D <- file.path(RESULTS_DIR, "neoadjuvant")

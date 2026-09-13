@@ -1,14 +1,14 @@
 # ============================================================================
-# figED3_proliferation_mediation.R — Extended Data Figure 3: proliferation mediation. Panels A-C: (A) bootstrap median mediated proportion by pathway, (B) per-drug bootstrap indirect-effect waterfall, (C) NetITH-IC50 Spearman rho distribution.
+# figS9_proliferation_mediation.R — Supplementary Figure 9
 # Project : NetITH — spectral-entropy descriptor of transcription-factor networks
 # Author  : Tao Zhu, Tongji Hospital, Tongji Medical College, HUST
 # Created : 2026-09-07
 # Inputs  : results/depmap/ext_d3_proliferation_mediation.csv,
 #           results/control/mediation_bootstrap.csv,
 #           results/gdsc/gdsc_drug_netith_correlations.csv
-# Outputs : results/figures/r/EDFig3_proliferation_mediation.{pdf,png}
+# Outputs : results/figures/r/FigS9_proliferation_mediation.{pdf,png}
 #           + per-panel exports in results/figures/r/panels/
-# Usage   : Rscript code/R/figures/figED3_proliferation_mediation.R
+# Usage   : Rscript code/R/figures/figS9_proliferation_mediation.R
 # ============================================================================
 
 .d <- getwd()
@@ -18,7 +18,7 @@ CODE_DIR <- file.path(PROJECT_ROOT, "code", "R")
 source(file.path(CODE_DIR, "00_global_config.R"))
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-NAME <- "EDFig3_proliferation_mediation"
+NAME <- "FigS9_proliferation_mediation"
 DEP <- file.path(RESULTS_DIR, "depmap")
 GDSC <- file.path(RESULTS_DIR, "gdsc")
 

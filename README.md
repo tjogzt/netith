@@ -22,7 +22,7 @@ NetITH is the von Neumann entropy of the non-normalised Laplacian **L = D − A*
 ## Repository layout
 
 ```
-├── code/R/            R analysis chain (00–16) + run_all.R + figures/ (Fig 1–4, EDFig 1–10, Fig S1–S6)
+├── code/R/            R analysis chain (00–16) + run_all.R + figures/ (Fig 1–4, Fig S1–S16)
 ├── scripts/
 │   ├── 00_data/       Preprocessing (raw → per-project caches)
 │   ├── 01_core/       Core pipeline (GDSC drugs, TCGA survival, multi-omics, meta-analysis, ...)

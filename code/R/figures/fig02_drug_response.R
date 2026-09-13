@@ -67,7 +67,7 @@ pB <- ggplot(dc, aes(rho, y, fill = pathway)) +
   annotate("text", x = Inf, y = -Inf, hjust = 1.05, vjust = -0.6, size = FONT_BASE/.pt,
            fontface = "bold", colour = COL_NER,
            label = sprintf("%.0f%% positive\ndirection", 100 * mean(dc$rho > 0))) +
-  labs(title = "B  GDSC pan-drug resistance (n=286 drugs, one bar per drug)",
+  labs(title = "B  GDSC pan-drug resistance (n=286 drugs)",
        x = "Spearman \u03c1 (NetITH vs. ln IC\u2085\u2080); 276/286 FDR<0.05 (BH)", y = NULL) +
   theme_pub() +
   theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())

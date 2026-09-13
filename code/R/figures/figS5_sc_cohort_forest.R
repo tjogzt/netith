@@ -25,9 +25,9 @@ read_j <- function(f) fromJSON(file.path(SCV, f))
 # ---- cohort data (single source: replication JSONs + truth table) -----------
 # class: discovery / replication / localisation / OS-replication
 d_cohorts <- data.frame(
-  cohort = c("Compendium (7 cancers, 113 patients)", "GSE115978 (31 patients)",
-             "GSE120575 (immune, 48 points)", "GSE123139 (IT vs N, 19 patients)",
-             "GSE72056 (tumour vs immune cells)"),
+  cohort = c("Compendium\n(7 cancers, 113 patients)", "GSE115978\n(31 patients)",
+             "GSE120575\n(immune, 48 points)", "GSE123139\n(IT vs N, 19 patients)",
+             "GSE72056\n(tumour vs immune cells)"),
   d      = c(0.687, -0.503, 0.091, -0.196, 0.571),
   lo     = c(0.37, -1.367, -0.453, -1.219, NA),   # GSE72056 CI computed below
   hi     = c(0.87, 0.187, 0.684, 0.901, NA),
@@ -39,8 +39,8 @@ d_cohorts <- data.frame(
 # analytic 95% CI for GSE72056 cell-level d (n1=1,257 tumour / n2=3,388 immune)
 n1 <- 1257; n2 <- 3388; d72056 <- 0.571
 se72056 <- sqrt(1/n1 + 1/n2 + d72056^2 / (2 * (n1 + n2)))
-d_cohorts$lo[d_cohorts$cohort == "GSE72056 (tumour vs immune cells)"] <- d72056 - 1.96 * se72056
-d_cohorts$hi[d_cohorts$cohort == "GSE72056 (tumour vs immune cells)"] <- d72056 + 1.96 * se72056
+d_cohorts$lo[d_cohorts$cohort == "GSE72056\n(tumour vs immune cells)"] <- d72056 - 1.96 * se72056
+d_cohorts$hi[d_cohorts$cohort == "GSE72056\n(tumour vs immune cells)"] <- d72056 + 1.96 * se72056
 
 # stopifnot against the JSON single source
 j575 <- read_j("gse120575_replication.json"); j139 <- read_j("gse123139_replication.json")
@@ -51,7 +51,7 @@ stopifnot(abs(j978$contrast_sample_res_vs_untreated$cohen_d - (-0.503)) < 0.01)
 stopifnot(abs(j656$tumour_vs_immune$cohen_d - 0.571) < 0.01)
 
 hr_cohorts <- data.frame(
-  cohort = c("GSE120575 OS (32 patients, 9 events)", "Xue2022 HCC OS (26 patients, 22 events)"),
+  cohort = c("GSE120575 OS\n(32 patients, 9 events)", "Xue2022 HCC OS\n(26 patients, 22 events)"),
   hr  = c(1.394, 1.083),
   lo  = c(0.635, 0.681),
   hi  = c(3.063, 1.721),
@@ -84,7 +84,7 @@ pA <- ggplot(d_cohorts, aes(x = d, y = cohort, colour = class)) +
             family = "Arial") +
   scale_colour_manual(values = CLASS_COL, name = "Cohort class") +
   scale_x_continuous(limits = c(-1.6, 2.6), breaks = seq(-1.5, 1, 0.5)) +
-  labs(title = "A  Outcome contrast (Cohen's d)", x = "Cohen's d (95% CI)", y = NULL) +
+  labs(title = "A  Outcome contrast", x = "Cohen's d (95% CI)", y = NULL) +
   theme_pub() +
   theme(legend.position = "none", axis.text.y = element_text(size = 8))
 
@@ -98,7 +98,7 @@ pB <- ggplot(hr_cohorts, aes(x = hr, y = cohort, colour = class)) +
             family = "Arial") +
   scale_colour_manual(values = CLASS_COL, name = "Cohort class") +
   scale_x_log10(limits = c(0.5, 10), breaks = c(0.5, 1, 2, 4, 8)) +
-  labs(title = "B  Overall survival (hazard ratio)", x = "HR per SD (95% CI, log scale)", y = NULL) +
+  labs(title = "B  Overall survival", x = "HR per SD (95% CI, log scale)", y = NULL) +
   theme_pub() +
   theme(axis.text.y = element_text(size = 8))
 
